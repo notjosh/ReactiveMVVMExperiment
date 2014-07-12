@@ -8,39 +8,45 @@
 
 #import "NTJAppDelegate.h"
 
+#import "NTJPerson.h"
+#import "NSDate+NTJAdditions.h"
+
+#import "NTJPersonListViewController.h"
+#import "NTJPersonListViewModel.h"
+
 @implementation NTJAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-    return YES;
-}
-							
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+	self.window.backgroundColor = UIColor.whiteColor;
+    
+    NSMutableArray *people = [NSMutableArray array];
+    NTJPerson *person;
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
+    person = [[NTJPerson alloc] init];
+    person.name = @"Joshua May";
+    person.dateOfBirth = [NSDate ntj_dateWithYear:1984 month:2 day:29];
+    [people addObject:person];
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
+    person = [[NTJPerson alloc] init];
+    person.name = @"Eugenio Marletti";
+    person.dateOfBirth = [NSDate ntj_dateWithYear:1985 month:3 day:18];
+    [people addObject:person];
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
+    person = [[NTJPerson alloc] init];
+    person.name = @"Harry Houdini";
+    person.dateOfBirth = [NSDate ntj_dateWithYear:1947 month:1 day:1];
+    [people addObject:person];
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+	NTJPersonListViewModel *viewModel = [[NTJPersonListViewModel alloc] initWithPeople:people.copy];
+	NTJPersonListViewController *listViewController = [[NTJPersonListViewController alloc] initWithViewModel:viewModel];
+    
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:listViewController];
+    
+	self.window.rootViewController = navigationController;
+	[self.window makeKeyAndVisible];
+    
+	return YES;
 }
 
 @end

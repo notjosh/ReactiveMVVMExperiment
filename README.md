@@ -13,6 +13,11 @@ open ReactiveMVVMExperiment.xcworkspace
 
 Boom.
 
+Thanks
+======
+
+It's an understatement to say this was inspired by https://github.com/jspahrsummers/GroceryList. I've used a lot of the framework/structure (base classes, general architecture, etc). It's no surprise..they know what they're doing :)
+
 License
 =======
 
