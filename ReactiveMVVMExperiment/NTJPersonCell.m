@@ -15,11 +15,14 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+	self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
     
     if (self) {
         RAC(self.textLabel, text) = RACObserve(self, viewModel.person.name);
-        RAC(self.detailTextLabel, text) = RACObserve(self, viewModel.age);
+        RAC(self.detailTextLabel, text) = [RACObserve(self, viewModel.age)
+                                           map:^(NSNumber *number) {
+                                               return number.stringValue;
+                                           }];
 
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }

@@ -8,6 +8,8 @@
 
 #import "NTJPersonViewModel.h"
 
+#import "NTJPersonEditViewModel.h"
+
 #import "NTJPerson.h"
 
 @implementation NTJPersonViewModel
@@ -18,6 +20,8 @@
 
     if (self) {
         _person = person;
+
+        @weakify(self)
 
         // TODO: observe UIApplicationSignificantTimeChangeNotification in case their birthday ticks to 12:00 while the screen is open!
         RACSignal *dateOfBirth = RACObserve(self.person, dateOfBirth);
@@ -33,6 +37,16 @@
 
                               return @(components.year);
                           }];
+
+        _editPersonCommand = [[RACCommand alloc]
+                                 initWithSignalBlock:^(id _) {
+                                     @strongify(self);
+
+                                     id viewModel = [[NTJPersonEditViewModel alloc] initWithPerson:self.person];
+                                     return [RACSignal return:viewModel];
+                                 }];
+        
+        RAC(self, editingPerson) = [_editPersonCommand.executionSignals switchToLatest];
     }
 
     return self;

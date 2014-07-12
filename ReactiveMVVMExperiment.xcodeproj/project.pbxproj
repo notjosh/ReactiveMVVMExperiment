@@ -12,13 +12,16 @@
 		42999E541970891C00078173 /* NTJPersonListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42999E531970891C00078173 /* NTJPersonListViewModel.m */; };
 		42999E5719708D6900078173 /* NTJPersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42999E5619708D6900078173 /* NTJPersonCell.m */; };
 		42999E5B197096AB00078173 /* NSDate+NTJAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 42999E5A197096AB00078173 /* NSDate+NTJAdditions.m */; };
+		42999E611971514500078173 /* NTJPersonEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42999E5F1971514500078173 /* NTJPersonEditViewController.m */; };
+		42999E621971514500078173 /* NTJPersonEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42999E601971514500078173 /* NTJPersonEditViewController.xib */; };
+		42999E65197154BA00078173 /* NTJPersonEditViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42999E64197154BA00078173 /* NTJPersonEditViewModel.m */; };
+		42999E6819715E6C00078173 /* UITextField+RACKeyboardSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 42999E6719715E6C00078173 /* UITextField+RACKeyboardSupport.m */; };
 		42D092ED19707AF9004760BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D092EC19707AF9004760BE /* Foundation.framework */; };
 		42D092EF19707AF9004760BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D092EE19707AF9004760BE /* CoreGraphics.framework */; };
 		42D092F119707AF9004760BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D092F019707AF9004760BE /* UIKit.framework */; };
 		42D092F719707AF9004760BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42D092F519707AF9004760BE /* InfoPlist.strings */; };
 		42D092F919707AF9004760BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D092F819707AF9004760BE /* main.m */; };
 		42D092FD19707AF9004760BE /* NTJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D092FC19707AF9004760BE /* NTJAppDelegate.m */; };
-		42D0930619707AF9004760BE /* NTJDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D0930519707AF9004760BE /* NTJDetailViewController.m */; };
 		42D0930819707AF9004760BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42D0930719707AF9004760BE /* Images.xcassets */; };
 		42D0930F19707AF9004760BE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D0930E19707AF9004760BE /* XCTest.framework */; };
 		42D0931019707AF9004760BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D092EC19707AF9004760BE /* Foundation.framework */; };
@@ -54,6 +57,13 @@
 		42999E5619708D6900078173 /* NTJPersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTJPersonCell.m; sourceTree = "<group>"; };
 		42999E59197096AB00078173 /* NSDate+NTJAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NTJAdditions.h"; sourceTree = "<group>"; };
 		42999E5A197096AB00078173 /* NSDate+NTJAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NTJAdditions.m"; sourceTree = "<group>"; };
+		42999E5E1971514500078173 /* NTJPersonEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTJPersonEditViewController.h; sourceTree = "<group>"; };
+		42999E5F1971514500078173 /* NTJPersonEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTJPersonEditViewController.m; sourceTree = "<group>"; };
+		42999E601971514500078173 /* NTJPersonEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTJPersonEditViewController.xib; sourceTree = "<group>"; };
+		42999E63197154BA00078173 /* NTJPersonEditViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTJPersonEditViewModel.h; sourceTree = "<group>"; };
+		42999E64197154BA00078173 /* NTJPersonEditViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTJPersonEditViewModel.m; sourceTree = "<group>"; };
+		42999E6619715E6C00078173 /* UITextField+RACKeyboardSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+RACKeyboardSupport.h"; sourceTree = "<group>"; };
+		42999E6719715E6C00078173 /* UITextField+RACKeyboardSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+RACKeyboardSupport.m"; sourceTree = "<group>"; };
 		42D092E919707AF9004760BE /* ReactiveMVVMExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveMVVMExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D092EC19707AF9004760BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42D092EE19707AF9004760BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,8 +74,6 @@
 		42D092FA19707AF9004760BE /* ReactiveMVVMExperiment-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactiveMVVMExperiment-Prefix.pch"; sourceTree = "<group>"; };
 		42D092FB19707AF9004760BE /* NTJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTJAppDelegate.h; sourceTree = "<group>"; };
 		42D092FC19707AF9004760BE /* NTJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTJAppDelegate.m; sourceTree = "<group>"; };
-		42D0930419707AF9004760BE /* NTJDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTJDetailViewController.h; sourceTree = "<group>"; };
-		42D0930519707AF9004760BE /* NTJDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTJDetailViewController.m; sourceTree = "<group>"; };
 		42D0930719707AF9004760BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		42D0930D19707AF9004760BE /* ReactiveMVVMExperimentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveMVVMExperimentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D0930E19707AF9004760BE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -135,8 +143,30 @@
 			children = (
 				42999E59197096AB00078173 /* NSDate+NTJAdditions.h */,
 				42999E5A197096AB00078173 /* NSDate+NTJAdditions.m */,
+				42999E6619715E6C00078173 /* UITextField+RACKeyboardSupport.h */,
+				42999E6719715E6C00078173 /* UITextField+RACKeyboardSupport.m */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		42999E5C19714E0000078173 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				42D0932C197080C5004760BE /* NTJPersonViewController.h */,
+				42D0932D197080C5004760BE /* NTJPersonViewController.m */,
+				42D0932E197080C5004760BE /* NTJPersonViewController.xib */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		42999E5D1971511F00078173 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				42999E5E1971514500078173 /* NTJPersonEditViewController.h */,
+				42999E5F1971514500078173 /* NTJPersonEditViewController.m */,
+				42999E601971514500078173 /* NTJPersonEditViewController.xib */,
+			);
+			name = Edit;
 			sourceTree = "<group>";
 		};
 		42D092E019707AF9004760BE = {
@@ -220,11 +250,8 @@
 			children = (
 				42999E511970885100078173 /* Base */,
 				42999E501970884900078173 /* List */,
-				42D0932C197080C5004760BE /* NTJPersonViewController.h */,
-				42D0932D197080C5004760BE /* NTJPersonViewController.m */,
-				42D0932E197080C5004760BE /* NTJPersonViewController.xib */,
-				42D0930419707AF9004760BE /* NTJDetailViewController.h */,
-				42D0930519707AF9004760BE /* NTJDetailViewController.m */,
+				42999E5C19714E0000078173 /* Detail */,
+				42999E5D1971511F00078173 /* Edit */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -236,6 +263,8 @@
 				42D0932719707E00004760BE /* NTJPersonViewModel.m */,
 				42999E521970891C00078173 /* NTJPersonListViewModel.h */,
 				42999E531970891C00078173 /* NTJPersonListViewModel.m */,
+				42999E63197154BA00078173 /* NTJPersonEditViewModel.h */,
+				42999E64197154BA00078173 /* NTJPersonEditViewModel.m */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -329,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42D0930819707AF9004760BE /* Images.xcassets in Resources */,
+				42999E621971514500078173 /* NTJPersonEditViewController.xib in Resources */,
 				42D09330197080C5004760BE /* NTJPersonViewController.xib in Resources */,
 				42999E4F1970883F00078173 /* NTJPersonListViewController.xib in Resources */,
 				42D092F719707AF9004760BE /* InfoPlist.strings in Resources */,
@@ -387,10 +417,12 @@
 				42999E5B197096AB00078173 /* NSDate+NTJAdditions.m in Sources */,
 				42D0932819707E00004760BE /* NTJPersonViewModel.m in Sources */,
 				42D0932F197080C5004760BE /* NTJPersonViewController.m in Sources */,
-				42D0930619707AF9004760BE /* NTJDetailViewController.m in Sources */,
+				42999E65197154BA00078173 /* NTJPersonEditViewModel.m in Sources */,
 				42D0932B19707E8E004760BE /* NTJViewController.m in Sources */,
+				42999E6819715E6C00078173 /* UITextField+RACKeyboardSupport.m in Sources */,
 				42D09334197082A1004760BE /* NTJPerson.m in Sources */,
 				42999E541970891C00078173 /* NTJPersonListViewModel.m in Sources */,
+				42999E611971514500078173 /* NTJPersonEditViewController.m in Sources */,
 				42999E5719708D6900078173 /* NTJPersonCell.m in Sources */,
 				42999E4E1970883F00078173 /* NTJPersonListViewController.m in Sources */,
 				42D092FD19707AF9004760BE /* NTJAppDelegate.m in Sources */,

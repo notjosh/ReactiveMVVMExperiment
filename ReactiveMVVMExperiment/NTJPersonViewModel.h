@@ -9,6 +9,7 @@
 #import "RVMViewModel.h"
 
 @class NTJPerson;
+@class NTJPersonEditViewModel;
 
 @interface NTJPersonViewModel : RVMViewModel
 
@@ -16,5 +17,9 @@
 @property (nonatomic, readonly) NSInteger age;
 
 - (instancetype)initWithPerson:(NTJPerson *)person;
+
+@property (nonatomic, strong, readonly) NTJPersonEditViewModel *editingPerson;
+
+@property (nonatomic, strong, readonly) RACCommand *editPersonCommand;
 
 @end
